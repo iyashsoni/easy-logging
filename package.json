@@ -1,0 +1,30 @@
+{
+  "name": "easy-logging",
+  "version": "1.0.0",
+  "description": "Easily write beautiful JSON formatted logs with colors for each level. ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://gitlab.com/yashsoni/easy-logging.git"
+  },
+  "keywords": [
+    "log",
+    "json-log",
+    "color",
+    "logger",
+    "logging"
+  ],
+  "author": "Yash Soni",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://gitlab.com/yashsoni/easy-logging/issues"
+  },
+  "homepage": "https://gitlab.com/yashsoni/easy-logging#readme",
+  "devDependencies": {
+    "bunyan": "^1.8.12",
+    "colors": "^1.3.3"
+  }
+}
