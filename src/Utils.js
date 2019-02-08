@@ -10,11 +10,12 @@ const _mandatoryParam = function (paramName) {
 }
 
 const _existsIn = function (value, container) {
+    value = String(value).toUpperCase();
     if(typeof value == "string" && container.indexOf(value) == -1) {
         return new Error(`${value} is not a valid value for the field: LogLevel. Please select one of the following: ${container}`);
     }
 }
 
-export {
+module.exports =  {
     _mandatoryParam, _typeCheck, _existsIn
 }
