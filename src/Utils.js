@@ -1,21 +1,43 @@
-const _typeCheck = function (type) {
-    switch(type) {
-        case 'name':
-            
+const LogLevels = ["INFO","DEBUG","WARN","ERROR","TRACE"];
+
+const _typeCheck = function (field, type) {
+    if(typeof field != type) {
+        throw new Error(`${field} is not of type ${String(type)}. Please try again!`);
     }
 }
 
 const _mandatoryParam = function (paramName) {
-    return new Error(`${paramName} is a required parameter. Please pass this parameter value while initializing Logger Object.`);
+    throw new Error(`${paramName} is a required parameter. Please pass this parameter value while initializing Logger Object.`);
 }
 
-const _existsIn = function (value, container) {
-    value = String(value).toUpperCase();
-    if(typeof value == "string" && container.indexOf(value) == -1) {
-        return new Error(`${value} is not a valid value for the field: LogLevel. Please select one of the following: ${container}`);
+const _isValidLogLevel = function (level) {
+    level = String(level).toUpperCase();
+    if(typeof level == "string" && LogLevels.indexOf(level) == -1) {
+        throw new Error(`${level} is not a valid value for the field: LogLevel. Please select one of the following: ${LogLevels}`);
     }
 }
 
+// Util function to convert msg into logging string
+function getJSONLogString(level, tag, msg, logParams, traceMeta) {
+    const result = { 
+        tag: tag,
+        level: level,
+        timestamp: Date()
+    };
+    if(traceMeta) {
+        result.tracePoint = traceMeta;
+        result.methodName = msg;
+    } else {
+        result.msg = msg;
+    }
+    if(logParams instanceof Object && !(logParams instanceof Array)) {
+        Object.assign(result, logParams);
+    } else {
+        result.extraParams = logParams;
+    }
+    return JSON.stringify(result);
+}
+
 module.exports =  {
-    _mandatoryParam, _typeCheck, _existsIn
+    _mandatoryParam, _typeCheck, _isValidLogLevel, getJSONLogString
 }
