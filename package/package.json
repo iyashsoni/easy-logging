@@ -1,6 +1,6 @@
 {
   "name": "easy-logging",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Easily write beautiful JSON formatted logs with colors for each level. ",
   "main": "index.js",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://gitlab.com/yashsoni/easy-logging.git"
+    "url": "git://https://gitlab.com/yashsoni/easy-logging.git"
   },
   "keywords": [
     "log",
@@ -23,7 +23,7 @@
     "url": "https://gitlab.com/yashsoni/easy-logging/issues"
   },
   "homepage": "https://gitlab.com/yashsoni/easy-logging#readme",
-  "devDependencies": {
+  "dependencies": {
     "chalk": "^2.4.2"
   }
 }
