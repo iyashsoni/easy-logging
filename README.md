@@ -59,7 +59,7 @@ logInstance.exiting("testMethod", {"bye":"bye"});
 
 ```
 
-Screenshots: 
+# Screenshots: 
 ![](README/Screenshot%202019-02-13%20at%208.04.53%20PM.png)
 ![](README/Screenshot%202019-02-13%20at%208.06.07%20PM.png)
 
