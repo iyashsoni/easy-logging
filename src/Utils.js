@@ -30,11 +30,7 @@ function getJSONLogString(level, tag, msg, logParams, traceMeta) {
     } else {
         result.msg = msg;
     }
-    if(logParams instanceof Object && !(logParams instanceof Array)) {
-        Object.assign(result, logParams);
-    } else {
-        result.extraParams = logParams;
-    }
+    result.extraParams = logParams;
     return JSON.stringify(result);
 }
 

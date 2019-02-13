@@ -34,31 +34,31 @@ const Logger  = function (tag, level){
     _isValidLogLevel(this.level);
 
     // Logging functions
-    this.error = function(msg, logParams){
+    this.error = function(msg, ...logParams){
         if(LogLevelValues[this.level] >= LogLevelValues.ERROR)
         log(colorSchema.error(getJSONLogString("ERROR", this.tag, msg, logParams)));  
     };
-    this.warn = function(msg, logParams){
+    this.warn = function(msg, ...logParams){
         if(LogLevelValues[this.level] >= LogLevelValues.WARN)
         log(colorSchema.warn(getJSONLogString("WARN", this.tag, msg, logParams)));
     };
-    this.info = function(msg, logParams){
+    this.info = function(msg, ...logParams){
         if(LogLevelValues[this.level] >= LogLevelValues.INFO)
         log(colorSchema.info(getJSONLogString("INFO", this.tag, msg, logParams)));
     };
-    this.debug = function(msg, logParams){
+    this.debug = function(msg, ...logParams){
         if(LogLevelValues[this.level] >= LogLevelValues.DEBUG)
         log(colorSchema.debug(getJSONLogString("DEBUG", this.tag, msg, logParams)));  
     };
-    this.entering = function(methodName, logParams){
+    this.entering = function(methodName, ...logParams){
         if(LogLevelValues[this.level] <= LogLevelValues.TRACE)
         log(colorSchema.entering(getJSONLogString("TRACE", this.tag, methodName, logParams, "ENTRY")));  
     };
-    this.exiting = function(methodName, logParams){
+    this.exiting = function(methodName, ...logParams){
         if(LogLevelValues[this.level] <= LogLevelValues.TRACE)
         log(colorSchema.exiting(getJSONLogString("TRACE", this.tag, methodName, logParams, "EXIT")));  
     };
-    this.trace = function(msg, logParams){
+    this.trace = function(msg, ...logParams){
         if(LogLevelValues[this.level] <= LogLevelValues.TRACE)
         log(colorSchema.trace(getJSONLogString("TRACE", this.tag, msg, logParams)));  
     };
