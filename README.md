@@ -6,7 +6,7 @@
 
 #### Example:
 
-#####- Initialisation:
+##### - Initialisation:
 
 ```
 var Logger = require('easy-logging');
@@ -21,7 +21,7 @@ var logInstance = new Logger("MyLoggerTag", "trace");
 
 ```
 
-#####- Usage:
+##### - Usage:
 
 Each of the Logger APIs take first param as a message - it is essential to pass meaningful value to this parameter.
 
