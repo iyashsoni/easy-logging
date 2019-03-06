@@ -1,7 +1,8 @@
-# # easy-logging
+# easy-logging
 
 #### Easily write beautiful JSON formatted logs with colours for each level. 
 
+#### A replacement to your boring console logs  😉
 - - - -
 
 #### Example:
@@ -60,8 +61,9 @@ logInstance.exiting("testMethod", {"bye":"bye"});
 ```
 
 # Screenshots: 
-![](README/Screenshot%202019-02-13%20at%208.04.53%20PM.png)
-![](README/Screenshot%202019-02-13%20at%208.06.07%20PM.png)
+![](README/Basic%20Logging.png)
+![](README/Logging%20Entry-Exit.png)
+![](README/With%20Indentation.png)
 
 
 That’s it, simple and easy to use - Colourful Logging Library!

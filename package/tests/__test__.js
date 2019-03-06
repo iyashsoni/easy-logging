@@ -8,20 +8,23 @@ var Logger = require('../index');
  */
 var logInstance = new Logger("MyLoggerTag", "trace");
 
-// // Logging Errors data
-// logInstance.error("I'm an error!");
+// setting JSON Indentation
+logInstance.setIndentation(2);
 
-// // Logging Warning data
-// logInstance.warn("I'm a warn!", {something: "anything"});
+// Logging Errors data
+logInstance.error("I'm an error!");
 
-// // Logging Info data
-// logInstance.info("I'm an info!", 1, 2, 3, 4, 5);
+// Logging Warning data
+logInstance.warn("I'm a warn!", {something: "anything"});
 
-// // Logging Debug data
-// logInstance.debug("I'm a debug!", ["Hello","World!"]);
+// Logging Info data
+logInstance.info("I'm an info!", 1, 2, 3, 4, 5);
 
-// // Logging Trace data
-// logInstance.trace("I'm a trace!");
+// Logging Debug data
+logInstance.debug("I'm a debug!", ["Hello","World!"]);
+
+// Logging Trace data
+logInstance.trace("I'm a trace!");
 
 // Logging Method Entry with Entry params
 logInstance.entering("testMethod", {"hello":"world"}, {"timeStamp":"1234567890"}, "This is another parameter that I want to be logged...");

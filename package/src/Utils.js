@@ -18,7 +18,7 @@ const _isValidLogLevel = function (level) {
 }
 
 // Util function to convert msg into logging string
-function getJSONLogString(level, tag, msg, logParams, traceMeta) {
+function getJSONLogData(level, tag, msg, logParams, traceMeta) {
     const result = { 
         tag: tag,
         level: level,
@@ -31,9 +31,9 @@ function getJSONLogString(level, tag, msg, logParams, traceMeta) {
         result.msg = msg;
     }
     result.extraParams = logParams;
-    return JSON.stringify(result);
+    return result;
 }
 
 module.exports =  {
-    _mandatoryParam, _typeCheck, _isValidLogLevel, getJSONLogString
+    _mandatoryParam, _typeCheck, _isValidLogLevel, getJSONLogData
 }

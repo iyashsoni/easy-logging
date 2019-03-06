@@ -1,7 +1,8 @@
-# # easy-logging
+# easy-logging
 
 #### Easily write beautiful JSON formatted logs with colours for each level. 
 
+#### A replacement to your boring console logs  😉
 - - - -
 
 #### Example:
